@@ -1,0 +1,295 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --accent-color: #d04ae2; /* Accent color */
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  color: white;
+  background-color: #000;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  padding: 4rem 2rem;
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-container {
+  position: relative;
+  margin-bottom: 1.8rem;
+}
+
+.profile-pic {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 0 0 4px var(--accent-color),
+    0 0 20px 8px rgba(213, 74, 226, 0.4), /* Accent color */
+    0 0 40px 12px rgba(152, 74, 226, 0.2); /* Accent color */
+  transition: box-shadow 0.4s ease;
+}
+
+.profile-pic:hover {
+  box-shadow:
+    0 0 0 4px var(--accent-color),
+    0 0 25px 10px rgba(226, 74, 226, 0.6), /* Accent color */
+    0 0 50px 16px rgba(226, 74, 206, 0.3); /* Accent color */
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #ccc;
+}
+
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  position: relative;
+}
+
+.main-nav a,
+.dropbtn {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+}
+
+.main-nav a:hover,
+.dropbtn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #111;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  min-width: 200px;
+  padding: 0.8rem 0;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 0.7rem 1.2rem;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.dropdown-content a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: none;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 2.5rem 1.5rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.tile-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.tile-link {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: white;
+}
+
+.tile {
+  position: relative;
+  height: 180px;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s;
+}
+
+.tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.3s;
+}
+
+.tile-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+  text-align: center;
+}
+
+.tile:hover .tile-overlay {
+  opacity: 1;
+}
+
+.tile:hover img {
+  filter: brightness(0.5);
+}
+
+.tile-title {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+  margin-top: 0.4rem;
+}
+
+.back-link {
+  display: inline-block;
+  margin: 1.5rem;
+  color: #ddd;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.back-link:hover {
+  color: white;
+}
+
+
+
+.projects-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.tree-root {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  cursor: default;
+  transition: background 0.3s;
+  position: relative;
+  z-index: 2;
+}
+
+.projects-dropdown:hover .tree-root {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.dropdown-bridge {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 16px; 
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 16px);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.25s ease, visibility 0.25s;
+  z-index: 1;
+}
+
+.projects-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.dropdown-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  padding: 0.7rem 0.8rem;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+  font-size: 0.95rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.25s ease;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.15);
+}

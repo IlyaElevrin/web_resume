@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="home">
+  <div class="content">
+    <div class="profile-container">
+      <img src="assets/1377820.png" alt="Profile Photo" class="profile-pic" />
+    </div>
+    <h1>Hi! I'm Ilya</h1>
+    <p></p>
+
+    <nav class="main-nav">
+      <div class="projects-dropdown">
+        <div class="tree-root">Projects</div>
+        <div class="dropdown-bridge"></div>
+        <div class="dropdown-menu">
+          <a href="data-science.html" class="dropdown-item">DataScience</a>
+          <a href="web.html" class="dropdown-item">Web</a>
+          <a href="dev.html" class="dropdown-item">Dev</a>
+        </div>
+      </div>
+
+      <a href="contributions.html">Contributions</a>
+      <a href="hackathons.html">Hackathons</a>
+      <a href="olympiads.html">Olympiads</a>
+      <a href="articles.html">Articles and research</a>
+      <a href="certificates.html">Certificates</a>
+    </nav>
+  </div>
+
+  <script>
+    const tree = document.getElementById('projects-tree');
+    const diagram = tree.querySelector('.tree-diagram');
+
+    tree.addEventListener('mouseenter', () => {
+      diagram.style.opacity = '1';
+      diagram.style.visibility = 'visible';
+      diagram.style.transform = 'translateY(0)';
+    });
+
+    tree.addEventListener('mouseleave', () => {
+      diagram.style.opacity = '0';
+      diagram.style.visibility = 'hidden';
+      diagram.style.transform = 'translateY(-10px)';
+    });
+  </script>
+</body>
+</html>

@@ -34,6 +34,12 @@ const tilesData = [
     description: "A naive Bayesian classifier for spam annihilation.",
     image: "https://i.ytimg.com/vi/lFJbZ6LVxN8/maxresdefault.jpg",
     link: "https://github.com/IlyaElevrin/hammer"
+  },
+  {
+    title: "Wink AI Model",
+    description: "A machine learning system for automatic age rating prediction of movie scripts based on content analysis.",
+    image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.iptv.rt.ru%2Fimages%2Fsocialwink.png&f=1&nofb=1&ipt=38b1895ef70fd844c4b3d392c8dbee1a5c2d1753800191eca9559cb04b4ac239",
+    link: "https://github.com/IlyaElevrin/wink_ai_model"
   }
 ];
 

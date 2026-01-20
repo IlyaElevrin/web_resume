@@ -1,10 +1,10 @@
 // js/hackathons.js
 const tilesData = [
   {
-    title: "-",
-    description: "-",
-    image: "-",
-    link: "-"
+    title: "Wink AI challenge",
+    description: "Automatic verification of the age category according to the scenario",
+    image: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Wink_LOGO_2021.png",
+    link: "https://github.com/IlyaElevrin/wink_ai_model"
   }
 ];
 
